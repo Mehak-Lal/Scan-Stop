@@ -1,0 +1,93 @@
+@import url('https://googleapis.com');
+
+/* --- MAIN CANVAS BACKGROUND WITH CODESPACE STARFIELD --- */
+html, body, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
+    background: radial-gradient(circle at center, #0c1b33 0%, #030914 100%) !important;
+    font-family: 'Share Tech Mono', monospace !important;
+}
+
+/* Global Font Override */
+* {
+    font-family: 'Share Tech Mono', monospace !important;
+}
+
+/* 1. MAIN TITLE: LARGE, CENTERED, GLOWING MINT GREEN */
+.cyber-center-title {
+    font-size: 70px !important;
+    font-weight: 900 !important;
+    color: #5effd4 !important; /* Perfect Glowing Mint Green */
+    text-align: center !important;
+    letter-spacing: 6px !important;
+    margin-top: 15px !important;
+    margin-bottom: 5px !important;
+    display: block !important;
+    /* Layered Radiance Glow */
+    text-shadow: 0 0 10px rgba(94, 255, 212, 0.8),
+                 0 0 25px rgba(94, 255, 212, 0.4) !important;
+}
+
+/* 2. SUBTITLE: ELECTRIC CYAN BLUE */
+.cyber-engine-title {
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    color: #00FFFF !important; /* Sharp Laser Blue */
+    text-align: center !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 25px !important;
+    display: block !important;
+    text-shadow: 0 0 10px rgba(0, 204, 255, 0.6) !important;
+}
+
+/* 3. MUTED EXPLANATION TEXT BELOW SUBTITLE */
+[data-testid="stMarkdownContainer"] p {
+    color: #e7e5e5 !important; /* Slate Info Gray */
+    text-align: center !important;
+}
+
+/* 4. ANALYZE SUSPICIOUS MESSAGES (Main Widget Section Header) */
+h3, [data-testid="stMarkdownContainer"] h3 {
+    color: #ffffff !important; /* Bold Clean White */
+    font-size: 20px !important;
+    font-weight: normal !important;
+    margin-top: 30px !important;
+}
+
+/* 5. INPUT BOX LABELS (e.g., Message Content) */
+[data-testid="stWidgetLabel"] p, label {
+    color: #e0dcdc !important; /* Mint Green Label Indicator */
+    font-size: 14px !important;
+    letter-spacing: 1px;
+}
+
+/* 6. TEXTBOX INPUT CONTAINER TACTICAL DESIGN */
+textarea, input, div[data-baseweb="textarea"], div[data-baseweb="input"] {
+    background-color: rgba(13, 25, 43, 0.7) !important; /* Translucent tech blue */
+    border: 1.5px solid #00ccff !important; /* Laser Blue Frame Border */
+    border-radius: 8px !important;
+    color: #dad6d6 !important;
+    box-shadow: inset 0 0 10px rgba(0, 204, 255, 0.15), 0 0 10px rgba(0, 204, 255, 0.1) !important;
+}
+
+/* 7. LEFT SIDEBAR HUD MENU OVERRIDES */
+[data-testid="stSidebar"] {
+    background-color: #050d1a !important;
+    border-right: 2px solid #00ccff !important; /* Electric Blue border split line */
+}
+[data-testid="stSidebar"] p, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] span {
+    color: #A599E9 !important;
+}
+
+/* 8. TAB CONTROLS (SMS Analyzer, Risk Calculator, etc.) */
+button[data-baseweb="tab"] {
+    background-color: rgba(13, 25, 43, 0.5) !important;
+    border: 1px solid rgba(0, 204, 255, 0.3) !important;
+    color: #fffdfd !important;
+    border-radius: 4px !important;
+    margin-right: 5px !important;
+}
+button[aria-selected="true"] {
+    background-color: rgba(0, 204, 255, 0.1) !important;
+    border: 1px solid #00ccff !important; /* Lights up blue when clicked */
+    color: #e0dcdc !important;
+}
