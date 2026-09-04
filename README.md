@@ -90,10 +90,10 @@ The interface is designed to clearly highlight potential risks and warn users be
 👥 Our Team
 
 Member| Role
-👤 MEHAK| Team Lead / Backend Debugging & Code Refinement
+👤 MEHAK | Team Lead / Backend Debugging & Code Refinement
 👤 SHUBHI| Backend Developer
-👤 MISHIKA| Presentation & Brainstorming
-👤 SONAL| Frontend Developer
+👤 MISHKA| Presentation & Brainstorming
+👤 SONAL | Frontend Developer
 
 ---
 
