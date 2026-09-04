@@ -6,10 +6,6 @@ html, body, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
     font-family: 'Share Tech Mono', monospace !important;
 }
 
-/* Global Font Override */
-* {
-    font-family: 'Share Tech Mono', monospace !important;
-}
 
 /* 1. MAIN TITLE: LARGE, CENTERED, GLOWING MINT GREEN */
 .cyber-center-title {
@@ -72,11 +68,14 @@ textarea, input, div[data-baseweb="textarea"], div[data-baseweb="input"] {
 /* 7. LEFT SIDEBAR HUD MENU OVERRIDES */
 [data-testid="stSidebar"] {
     background-color: #050d1a !important;
-    border-right: 2px solid #00ccff !important; /* Electric Blue border split line */
+    border-right: 2px solid #00ccff !important;
 }
-[data-testid="stSidebar"] p, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] span {
+
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] h2 {
     color: #A599E9 !important;
 }
+
 
 /* 8. TAB CONTROLS (SMS Analyzer, Risk Calculator, etc.) */
 button[data-baseweb="tab"] {
@@ -88,6 +87,14 @@ button[data-baseweb="tab"] {
 }
 button[aria-selected="true"] {
     background-color: rgba(0, 204, 255, 0.1) !important;
-    border: 1px solid #00ccff !important; /* Lights up blue when clicked */
+    border: 1px solid #00ccff !important;
     color: #e0dcdc !important;
+}
+
+
+/* FIX: Preserve Streamlit Material Icons */
+span[class*="material-symbols"],
+span[class*="material-icons"] {
+    font-family: "Material Symbols Rounded", "Material Symbols Outlined",
+                 "Material Icons", sans-serif !important;
 }
