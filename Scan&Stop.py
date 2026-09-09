@@ -1,7 +1,6 @@
 import streamlit as st 
- 
-st.set_page_config(page_title="SCAN&STOP - RBI Scam Detector", layout="wide") 
 
+st.set_page_config(page_title="SCAN&STOP - RBI Scam Detector", layout="wide") 
 
 # ---------------------------------------------------------
 # LANGUAGE SELECTION
@@ -12,7 +11,6 @@ language = st.sidebar.selectbox(
     "Preferred Language / पसंदीदा भाषा",
     ["English", "हिंदी"]
 )
-
 
 # ---------------------------------------------------------
 # TRANSLATIONS
@@ -34,6 +32,7 @@ translations = {
         "tab_sms": "📲 SMS / Message Analyzer",
         "tab_risk": "📋 Risk Score Calculator",
         "tab_help": "🚨 Emergency Help",
+        "tab_faq": "❓ FAQs",
 
         # Tab 1
         "analyze_title": "Analyze Suspicious Messages / Links",
@@ -144,8 +143,59 @@ translations = {
             "Uninstall the app after taking screenshots of transaction history "
             "and threatening messages for evidence."
         ),
-    },
 
+        # Tab 4 - FAQs
+        "faq_title": "Frequently Asked Questions (FAQs)",
+        "faq_description": "Common questions about digital loan scams and how to stay safe.",
+
+        "faq_q1": "What is a digital loan scam?",
+        "faq_a1": (
+            "A digital loan scam is when fake apps or lenders trick you into sharing personal data "
+            "or paying fees, but never give a real loan. They often harass victims using contacts and photos."
+        ),
+
+        "faq_q2": "How can I spot a fake loan app?",
+        "faq_a2": (
+            "Red flags include: no documentation needed, no CIBIL check, very short repayment time (<7 days), "
+            "upfront fees, and requests for contacts/gallery permissions."
+        ),
+
+        "faq_q3": "Is it normal for a loan app to ask for my contacts?",
+        "faq_a3": (
+            "No. RBI guidelines prohibit legitimate lenders from accessing your contacts, gallery, or SMS. "
+            "This is usually done to harass you or your contacts if you miss a payment."
+        ),
+
+        "faq_q4": "Can a lender demand repayment in less than 7 days?",
+        "faq_a4": (
+            "No. Under RBI Digital Lending Guidelines, legitimate lenders cannot offer loans with "
+            "repayment tenures under 7 days."
+        ),
+
+        "faq_q5": "What should I do if I already shared my documents?",
+        "faq_a5": (
+            "Immediately revoke app permissions, uninstall the app, take screenshots of all messages, "
+            "and file a complaint at cybercrime.gov.in and sachet.rbi.org.in."
+        ),
+
+        "faq_q6": "Are all instant loan apps scams?",
+        "faq_a6": (
+            "No. Some NBFC-backed apps are genuine. Always check the parent company name, "
+            "permissions asked, and whether they follow RBI guidelines."
+        ),
+
+        "faq_q7": "What is the RBI Sachet portal?",
+        "faq_a7": (
+            "Sachet (sachet.rbi.org.in) is RBI’s official portal to check if a lending entity is registered "
+            "and to report illegal digital lending apps."
+        ),
+
+        "faq_q8": "Whom do I call if I am being harassed by a loan app?",
+        "faq_a8": (
+            "Call 1930 (National Cyber Crime Helpline) and file a complaint at cybercrime.gov.in. "
+            "Also report the app on sachet.rbi.org.in."
+        ),
+    },
 
     "हिंदी": {
         "did_you_know": "💡 क्या आपको पता है?",
@@ -161,6 +211,7 @@ translations = {
         "tab_sms": "📲 SMS / संदेश विश्लेषक",
         "tab_risk": "📋 जोखिम स्कोर कैलकुलेटर",
         "tab_help": "🚨 आपातकालीन सहायता",
+        "tab_faq": "❓ अक्सर पूछे जाने वाले प्रश्न (FAQs)",
 
         # Tab 1
         "analyze_title": "संदिग्ध संदेश / लिंक की जाँच करें",
@@ -273,13 +324,62 @@ translations = {
             "Evidence के लिए transaction history और threatening messages "
             "के screenshots लेने के बाद app को uninstall करें।"
         ),
+
+        # Tab 4 - FAQs
+        "faq_title": "अक्सर पूछे जाने वाले प्रश्न (FAQs)",
+        "faq_description": "डिजिटल लोन स्कैम और सुरक्षा से जुड़े सामान्य प्रश्न।",
+
+        "faq_q1": "डिजिटल लोन स्कैम क्या होता है?",
+        "faq_a1": (
+            "डिजिटल लोन स्कैम तब होता है जब नकली ऐप्स या लेंडर्स आपको पर्सनल डेटा शेयर करने "
+            "या फीस देने के लिए धोखा देते हैं, लेकिन असली लोन नहीं देते। वे अक्सर कॉन्टैक्ट्स और फोटो का इस्तेमाल करके उत्पीड़न करते हैं।"
+        ),
+
+        "faq_q2": "मैं नकली लोन ऐप को कैसे पहचान सकता/सकती हूँ?",
+        "faq_a2": (
+            "रेड फ्लैग्स: बिना दस्तावेज़, बिना CIBIL जाँच, बहुत कम repayment समय (<7 दिन), "
+            "लोन देने से पहले फीस, और कॉन्टैक्ट्स/गैलरी की परमिशन माँगना।"
+        ),
+
+        "faq_q3": "क्या लोन ऐप का मेरे कॉन्टैक्ट्स माँगना सामान्य है?",
+        "faq_a3": (
+            "नहीं। RBI गाइडलाइंस के अनुसार वैध लेंडर्स आपके कॉन्टैक्ट्स, गैलरी या SMS तक नहीं पहुँच सकते। "
+            "इसका इस्तेमाल अक्सर उत्पीड़न के लिए किया जाता है।"
+        ),
+
+        "faq_q4": "क्या लेंडर 7 दिनों से कम समय में repayment माँग सकता है?",
+        "faq_a4": (
+            "नहीं। RBI डिजिटल लेंडिंग गाइडलाइंस के तहत वैध लेंडर्स 7 दिनों से कम की repayment अवधि वाले लोन नहीं दे सकते।"
+        ),
+
+        "faq_q5": "अगर मैंने पहले ही अपने दस्तावेज़ शेयर कर दिए हैं तो क्या करूँ?",
+        "faq_a5": (
+            "तुरंत ऐप की permissions बंद करें, ऐप uninstall करें, सभी messages के screenshots लें, "
+            "और cybercrime.gov.in और sachet.rbi.org.in पर complaint दर्ज करें।"
+        ),
+
+        "faq_q6": "क्या सभी instant loan ऐप्स scam होते हैं?",
+        "faq_a6": (
+            "नहीं। कुछ NBFC-बैक्ड ऐप्स असली होते हैं। हमेशा parent company, माँगी गई permissions, "
+            "और RBI गाइडलाइंस का पालन जाँचें।"
+        ),
+
+        "faq_q7": "RBI Sachet portal क्या है?",
+        "faq_a7": (
+            "Sachet (sachet.rbi.org.in) RBI का आधिकारिक portal है जहाँ आप चेक कर सकते हैं कि lending entity registered है या नहीं, "
+            "और अवैध डिजिटल लेंडिंग ऐप्स की report कर सकते हैं।"
+        ),
+
+        "faq_q8": "अगर लोन ऐप मुझे harass कर रहा है तो किसे call करूँ?",
+        "faq_a8": (
+            "1930 (National Cyber Crime Helpline) पर call करें और cybercrime.gov.in पर complaint दर्ज करें। "
+            "साथ ही sachet.rbi.org.in पर भी report करें।"
+        ),
     }
 }
 
-
 # Select translations for current language
 text = translations[language]
-
 
 # ---------------------------------------------------------
 # CSS
@@ -291,9 +391,7 @@ def load_css(filename):
     except FileNotFoundError: 
         pass # Prevents crash if CSS file is missing locally
 
-
 load_css("scanstyle.css")
-
 
 # ---------------------------------------------------------
 # MAIN HEADER
@@ -305,17 +403,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
 # 2. Secondary engine title header in cyan 
 st.markdown(
     f"<h2 class='cyber-engine-title'>{text['engine_title']}</h2>",
     unsafe_allow_html=True
 )
 
-
 # 3. Your existing subtext line 
 st.write(text["description"])
-
 
 # ---------------------------------------------------------
 # SIDEBAR - QUICK STATS
@@ -327,17 +422,16 @@ st.sidebar.info(
     text["did_you_know_text"]
 )
 
-
 # ---------------------------------------------------------
 # TABS
 # ---------------------------------------------------------
 
-tab1, tab2, tab3 = st.tabs([
+tab1, tab2, tab3, tab4 = st.tabs([
     text["tab_sms"],
     text["tab_risk"],
-    text["tab_help"]
+    text["tab_help"],
+    text["tab_faq"]
 ])
-
 
 # --------------------------------------
 # TAB 1: SMS / WHATSAPP TEXT ANALYZER
@@ -356,28 +450,28 @@ with tab1:
         if user_text: 
             text_lower = user_text.lower() 
             flags = [] 
- 
+
             # 1. FIXED: Dynamic checking for "No Documentation" variations 
             if "documentation" in text_lower or "no doc" in text_lower: 
                 if "without" in text_lower or "no " in text_lower or "zero" in text_lower: 
                     flags.append(text["documentation_flag"])
-             
+                
             # 2. FIXED: Dynamic checking for "No CIBIL" variations 
             if "cibil" in text_lower: 
                 if "no " in text_lower or "without" in text_lower or "zero" in text_lower or "low" in text_lower: 
                     flags.append(text["cibil_flag"])
- 
+
             # 3. Link shortener alerts 
             if any(link in text_lower for link in ["bit.ly", "tinyurl", "telegram", "t.me", "wa.me"]): 
                 flags.append(text["link_flag"])
- 
+
             # 4. Urgency & Guarantee triggers 
             if "100%" in text_lower or "guaranteed" in text_lower or "approve" in text_lower: 
                 flags.append(text["guaranteed_flag"])
-             
+                
             if "instant" in text_lower or "urgently" in text_lower or "mins" in text_lower or "minutes" in text_lower: 
                 flags.append(text["urgency_flag"])
- 
+
             # Display results 
             if flags: 
                 st.error(
@@ -397,7 +491,6 @@ with tab1:
                 st.success(text["safe_text"]) 
         else: 
             st.warning(text["paste_first"])
-
 
 # ---------------------------------------------------------
 # TAB 2: RISK SCORE CALCULATOR & LENDER CHECK
@@ -481,7 +574,6 @@ with tab2:
         else: 
             st.success(text["low"])
 
-
 # ---------------------------------------------------------
 # TAB 3: EMERGENCY ACTION GUIDE
 # ---------------------------------------------------------
@@ -506,3 +598,24 @@ with tab3:
            * {text["step4_text"]}
         """
     )
+
+# ---------------------------------------------------------
+# TAB 4: FAQs
+# ---------------------------------------------------------
+
+with tab4:
+    st.header(text["faq_title"])
+    st.write(text["faq_description"])
+
+    st.markdown("### " + ("Common Questions" if language == "English" else "सामान्य प्रश्न"))
+
+    st.expander(text["faq_q1"]).write(text["faq_a1"])
+    st.expander(text["faq_q2"]).write(text["faq_a2"])
+    st.expander(text["faq_q3"]).write(text["faq_a3"])
+    st.expander(text["faq_q4"]).write(text["faq_a4"])
+    st.expander(text["faq_q5"]).write(text["faq_a5"])
+    st.expander(text["faq_q6"]).write(text["faq_a6"])
+    st.expander(text["faq_q7"]).write(text["faq_a7"])
+    st.expander(text["faq_q8"]).write(text["faq_a8"])
+
+    
