@@ -1,4 +1,1 @@
 streamlit
-python
-css
-streamlit cloud

@@ -62,10 +62,6 @@ The application is available in English and Hindi, allowing users to choose the 
 
 Users can access frequently asked questions to quickly understand what they should do in common scam-related situations.
 
-🌓 Light & Dark Theme
-
-Users can switch between light and dark themes according to their preference.
-
 👥 User-Friendly Interface
 
 The application is designed to be simple and accessible, even for users with little or no knowledge of cybersecurity.
